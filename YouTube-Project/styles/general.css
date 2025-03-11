@@ -1,0 +1,48 @@
+p {
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(248, 248, 248);;
+}
+
+main {
+    margin: 0;
+    min-height: 100vh;
+    padding-top: 70px;
+    padding-left: 90px;
+
+    transition: 0.3s;
+}
+
+.footer {
+    margin-top: 50px;
+    text-align: center;
+    font: normal 12px Roboto, Arial, sans-serif;
+    background-color: white;
+    padding: 5px 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+
+    position: absolute;
+    right: 0;
+    left: 0;
+}
+
+.credits {
+    text-decoration: none;
+    color: rgb(201, 0, 0);;
+    transition: 0.3s;
+}
+
+.credits:hover {
+    display: inline-block;
+
+    font-weight: bold;
+    font-size: 16px;
+    padding: 0 10px;
+    text-decoration: underline;
+
+    transform: translateY(-5px);
+}
