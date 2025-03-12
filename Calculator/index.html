@@ -26,6 +26,7 @@
             border: none;
             cursor: pointer;
             transition: 0.3s;
+            text-align: center;
         }
 
         .gray-button {
@@ -65,7 +66,7 @@
         <button class="calculator-button gray-button" onclick="updateCalculation('7');">7</button>
         <button class="calculator-button gray-button" onclick="updateCalculation('8');">8</button>
         <button class="calculator-button gray-button" onclick="updateCalculation('9');">9</button>
-        <button class="calculator-button orange-button" onclick="updateCalculation(' * ');">*</button>
+        <button class="calculator-button orange-button" onclick="updateCalculation(' * ');">X</button>
     </div>
     <div>
         <button class="calculator-button gray-button" onclick="updateCalculation('0');">0</button>
@@ -74,7 +75,7 @@
         <!-- Utiliza a função eval para calcular tudo que está contido em 'calculation' e retorna para ele mesmo. -->
         <!-- A função eval avalia o conteúdo de uma string como se fosse código JavaScript, ou seja, ela pega toda a informação contida em 'calculation' e transforma em uma única linha de codigo. -->
 
-        <button class="calculator-button orange-button" onclick="updateCalculation(' / ');">/</button>
+        <button class="calculator-button orange-button" onclick="updateCalculation(' / ');">÷</button>
     </div>
     <div>
         <button class="calculator-button gray-button clear-button" onclick="calculation = ''; displayCalculation(); localStorage.setItem('calculation', calculation);">Clear</button>
