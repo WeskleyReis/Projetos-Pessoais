@@ -1,7 +1,7 @@
 .video-grid {
     flex-grow: 1;
     min-width: 0;
-    max-width: 2648px;
+    max-width: 2539px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     /* Modo simplificado e automatico de orgazinar as colunas da grade */
