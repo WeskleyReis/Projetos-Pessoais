@@ -25,6 +25,13 @@ body {
     transition: 0.3s;
 }
 
+@media (max-width: 420px) {
+    .move-button {
+        width: 100px;
+        height: 100px;
+    }
+}
+
 .move-button:hover {
     transform: scale(1.1);
 }
@@ -46,6 +53,7 @@ body {
 
 .reset-score-button {
     background-color: white;
+    color: black;
     border: none;
     border-radius: 5px;
     font-size: 15px;
