@@ -8,17 +8,19 @@
 </head>
 <body>
     <p class="title">JOKÊNPO</p>
-    <button class="move-button" id="pedra">
-        <img class="move-icon" src="imagens/pedra-emoji.png">
-    </button>
-    <button class="move-button" id="papel">
-        <img class="move-icon" src="imagens/papel-emoji.png">
-    </button>
-    <button class="move-button" id="tesoura">
-        <img class="move-icon" src="imagens/tesoura-emoji.png">
-    </button>
+    <div class="jokenpo">
+        <button class="move-button" id="pedra">
+            <img class="move-icon" src="imagens/pedra-emoji.png" alt="pedra-emoji">
+        </button>
+        <button class="move-button" id="papel">
+            <img class="move-icon" src="imagens/papel-emoji.png" alt="papel-emoji">
+        </button>
+        <button class="move-button" id="tesoura">
+            <img class="move-icon" src="imagens/tesoura-emoji.png" alt="tesoura-emoji">
+        </button>
+    </div>
     <p class="result"></p>
-    <p class="escolhas"></p>
+    <p class="choices"></p>
     <p class="score">Vitorias: 0, Derrotas: 0, Empates: 0</p>
     <button class="reset-score-button" onclick="resetScore()">Reset Score</button>
     <script src="script.js"></script>

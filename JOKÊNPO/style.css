@@ -1,12 +1,28 @@
 body {
     background-color: rgb(25, 25, 25);
     color: white;
-    font-family: Arial;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    margin: 0;
 }
 
 .title {
     font-size: 30px;
     font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.jokenpo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    max-width: 100%;
 }
 
 .move-icon {
@@ -16,20 +32,13 @@ body {
 .move-button {
     width: 120px;
     height: 120px;
-    border-radius: 60px;
+    border-radius: 50%;
     border: 3px solid white;
-
     background-color: transparent;
     margin: 0 5px;
     cursor: pointer;
     transition: 0.3s;
-}
-
-@media (max-width: 420px) {
-    .move-button {
-        width: 100px;
-        height: 100px;
-    }
+    max-width: 100%;
 }
 
 .move-button:hover {
@@ -44,11 +53,11 @@ body {
 .result {
     font-size: 25px;
     font-weight: bold;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 .score {
-    margin-top: 60px;
+    margin-top: 40px;
 }
 
 .reset-score-button {
@@ -56,11 +65,33 @@ body {
     color: black;
     border: none;
     border-radius: 5px;
-    font-size: 15px;
-    padding: 8px 15px;
+    font-size: 16px;
+    padding: 10px 20px;
     cursor: pointer;
+    margin-top: 20px;
+    transition: 0.2s;
+}
+
+.reset-score-button:hover {
+    background-color: rgb(200, 200, 200);
 }
 
 .reset-score-button:active {
-    transform: scale(0.95);
+    transform: scale(0.9);
+}
+
+/* MEDIA QUERIES PARA TELAS PEQUENAS */
+@media (max-width: 600px) {
+    .move-button {
+        width: 90px;  /* Reduz o tamanho dos botões */
+        height: 90px;
+    }
+
+    .move-icon {
+        height: 40px; /* Reduz o tamanho das imagens */
+    }
+
+    .title {
+        font-size: 28px; /* Reduz o tamanho do título */
+    }
 }
