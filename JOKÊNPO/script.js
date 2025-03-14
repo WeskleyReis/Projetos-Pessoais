@@ -6,9 +6,15 @@ const result = document.querySelector('.result')
 const score = document.querySelector('.score')
 const choices = document.querySelector('.choices')
 
-let vitorias = 0
-let derrotas = 0
-let empates = 0
+const placar = JSON.parse(localStorage.getItem('placar')) || {vitorias: 0, derrotas: 0, empates: 0}
+// Busca no armazenamento local o placar, se não tiver ele inicia com as contagens em 0.
+
+updateScore()
+
+function updateScore() {
+    score.innerHTML = `Vitorias: ${placar.vitorias}, Derrotas: ${placar.derrotas}, Empates: ${placar.empates}` 
+    // Informa a pontuação atual do jogador.   
+}
 
 function escolha(jogador) {
     const computer = escolhaComputer()
@@ -19,20 +25,22 @@ function escolha(jogador) {
 
     setTimeout (() => {
     if (jogador === computer) {
-        empates ++
+        placar.empates ++
         result.innerHTML = 'Empate!'
     } else if ((jogador === 'pedra' && computer === 'tesoura') ||
                (jogador === 'papel' && computer === 'pedra') ||
                (jogador === 'tesoura' && computer === 'papel')) {
-        vitorias ++
+                placar.vitorias ++
         result.innerHTML = 'Você Venceu!'
     } else {
-        derrotas ++
+        placar.derrotas ++
         result.innerHTML = 'Você Perdeu!'
     }
 
-    score.innerHTML = `Vitorias: ${vitorias}, Derrotas: ${derrotas}, Empates: ${empates}`
-    // Informa a pontuação atual do jogador.
+    localStorage.setItem('placar', JSON.stringify(placar))
+    // Salva as informações do placar no armazenamento local.
+
+    updateScore()
 
     choices.innerHTML = `Você <img class="move-icon" src="imagens/${jogador}-emoji.png"> <img class="move-icon" src="imagens/${computer}-emoji.png"> Computador`
     // Imprime na tela a jogada tanto do jogador quanto do computador.
@@ -47,10 +55,11 @@ function escolhaComputer() {
 }
 
 function resetScore() {
-    vitorias = 0
-    derrotas = 0
-    empates = 0
-    score.innerHTML = 'Vitorias: 0, Derrotas: 0, Empates: 0'
+    placar.vitorias = 0; placar.derrotas = 0; placar.empates = 0
+
+    localStorage.setItem('placar', JSON.stringify(placar))
+    updateScore()
+
     choices.innerHTML = ''
     result.innerHTML = ''
     // Reseta toda as contagens para 0 e atualiza o HTML.
