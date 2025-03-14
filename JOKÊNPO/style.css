@@ -54,8 +54,6 @@ body {
     font-size: 25px;
     font-weight: bold;
     margin-top: 40px;
-    margin-left: 10px;
-    margin-right: 10px;
 }
 
 .score {
@@ -82,6 +80,26 @@ body {
     transform: scale(0.9);
 }
 
+footer {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+footer a:hover {
+    padding: 0 10px;
+    color: rgb(0, 191, 255);
+    text-decoration: underline;
+    font-size: 16px;
+}
+
 /* MEDIA QUERIES PARA TELAS PEQUENAS */
 @media (max-width: 600px) {
     .move-button {
@@ -95,5 +113,9 @@ body {
 
     .title {
         font-size: 28px; /* Reduz o tamanho do título */
+    }
+
+    .result {
+        width: 430px;
     }
 }

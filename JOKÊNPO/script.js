@@ -1,19 +1,13 @@
-document.getElementById('pedra').addEventListener('click', () => escolha('pedra'))
-document.getElementById('papel').addEventListener('click', () => escolha('papel'))
-document.getElementById('tesoura').addEventListener('click', () => escolha('tesoura'))
-
 const result = document.querySelector('.result')
-const score = document.querySelector('.score')
-const choices = document.querySelector('.choices')
 
 const placar = JSON.parse(localStorage.getItem('placar')) || {vitorias: 0, derrotas: 0, empates: 0}
-// Busca no armazenamento local o placar, se não tiver ele inicia com as contagens em 0.
+// Busca no armazenamento local o placar, se não tiver, inicia com as contagens em 0.
 
 updateScore()
 
 function updateScore() {
-    score.innerHTML = `Vitorias: ${placar.vitorias}, Derrotas: ${placar.derrotas}, Empates: ${placar.empates}` 
-    // Informa a pontuação atual do jogador.   
+    document.querySelector('.score').innerHTML = `Vitorias: ${placar.vitorias}, Derrotas: ${placar.derrotas}, Empates: ${placar.empates}` 
+    // Atualiza a pontuação na tela.  
 }
 
 function escolha(jogador) {
@@ -42,16 +36,18 @@ function escolha(jogador) {
 
     updateScore()
 
-    choices.innerHTML = `Você <img class="move-icon" src="imagens/${jogador}-emoji.png"> <img class="move-icon" src="imagens/${computer}-emoji.png"> Computador`
+    document.querySelector('.choices').innerHTML = `Você <img class="move-icon" src="imagens/${jogador}-emoji.png">
+    <img class="move-icon" src="imagens/${computer}-emoji.png"> Computador`
     // Imprime na tela a jogada tanto do jogador quanto do computador.
     }, 3000)
     // Utilização da função setTimeout para imprimir na tela JO-KÊN-PO cronometrado e apos isso imprimpir o resultado.
 }
 
+
 function escolhaComputer() {
-    const randomNumber = Math.random()
-    return randomNumber < 1 / 3 ? 'pedra' : randomNumber < 2 / 3 ? 'papel' : 'tesoura'
-    // Retorna 'pedra' se o número aleatório for menor que 1/3, se não for passa para a próxima verificação e assim por diante.
+    const opcoes = ['pedra', 'papel', 'tesoura']
+    return opcoes[Math.floor(Math.random() * 3)]
+    // Retorna aleatoriamente 'pedra', 'papel' ou 'tesoura' com probabilidade igual.
 }
 
 function resetScore() {
@@ -60,7 +56,7 @@ function resetScore() {
     localStorage.setItem('placar', JSON.stringify(placar))
     updateScore()
 
-    choices.innerHTML = ''
-    result.innerHTML = ''
-    // Reseta toda as contagens para 0 e atualiza o HTML.
+    document.querySelector('.choices').innerHTML = ''
+    result.innerHTML = 'CLIQUE EM UM DOS BOTÕES PARA INICIAR'
+    // Reseta toda as contagens para 0 e atualiza as informações na tela.
 }

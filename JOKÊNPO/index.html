@@ -9,20 +9,21 @@
 <body>
     <p class="title">JOKÊNPO</p>
     <div class="jokenpo">
-        <button class="move-button" id="pedra">
+        <button class="move-button" onclick="escolha('pedra')" type="button">
             <img class="move-icon" src="imagens/pedra-emoji.png" alt="pedra-emoji">
         </button>
-        <button class="move-button" id="papel">
+        <button class="move-button" onclick="escolha('papel')" type="button">
             <img class="move-icon" src="imagens/papel-emoji.png" alt="papel-emoji">
         </button>
-        <button class="move-button" id="tesoura">
+        <button class="move-button" onclick="escolha('tesoura')" type="button">
             <img class="move-icon" src="imagens/tesoura-emoji.png" alt="tesoura-emoji">
         </button>
     </div>
-    <p class="result">CLICK EM UM DOS BOTÕES PARA INCIAR</p>
+    <p class="result">CLIQUE EM UM DOS BOTÕES PARA INICIAR</p>
     <p class="choices"></p>
     <p class="score"></p>
-    <button class="reset-score-button" onclick="resetScore()">Reiniciar Pontuação</button>
+    <button class="reset-score-button" onclick="resetScore()" type="button">Reiniciar Pontuação</button>
+    <footer>&copy; This website was created by <a href="https://www.instagram.com/weskleyreis/" target="_blank">WeskleyX</a> solely as part of his activity.</footer>
     <script src="script.js"></script>
 </body>
 </html>
