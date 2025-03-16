@@ -3,61 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="imagens/google-logo-icon.svg" type="image/x-icon">
-    <link rel="stylesheet" href="section.css">
+    <link rel="stylesheet" href="general.css">
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="footer.css">
-    <title>Google</title>
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <section class="section">
-        <header class="header">
-                <div class="header-container">
-                    <div class="header-icons">
-                        <div class="gmail text"><a href="https://mail.google.com/mail">Gmail</a></div>
-                        <div class="imagens text"><a href="https://www.google.com/imghp?hl=pt-BR&authuser=0&ogbl">Imagens</a></div>
+    <header class="header">
+            <nav class="header-container">
+                    <div class="gmail text">
+                        <a href="https://mail.google.com/mail">Gmail</a>
                     </div>
-                    <img class="apps-icon" src="imagens/apps-icon.svg" alt="">
-                    <button class="fazer-login"><a href="https://accounts.google.com/">Fazer Login</a></button>
-                </div>
-        </header>
-        <main class="main">
-            <img class="google-logo" src="imagens/google-logo.png">
+                    <div class="imagens text">
+                        <a href="https://www.google.com/imghp?hl=pt-BR&authuser=0&ogbl">Imagens</a>
+                    </div>
+                <img class="apps-icon" src="imagens/apps-icon.svg" alt="">
+                <button class="fazer-login"><a href="https://accounts.google.com/">Fazer Login</a></button>
+            </nav>
+    </header>
+    <main class="main">
+        <div class="flex-1">
+            <div class="google-logo">
+                <img class="google-img" src="imagens/google-logo.png">                
+            </div>
+        </div>
+        <section class="section">
             <div class="search-container">
+                <img class="search-icon" src="imagens/search-icon.svg">
                 <input class="search-bar" type="text" aria-label="Pesquisar no Google">
-                <div class="icons">
-                    <div class="search-icon-button"><img src="imagens/search-icon.svg" class="search-icon"></div>
-                    <div class="search-mic-icon-button"><img src="imagens/google-mic-icon.svg" class="search-mic-icon"></div>
-                </div>
+                <img class="search-tia-icon" src="imagens/tia.png">
+                <img class="search-mic-icon" src="imagens/google-mic-icon.svg">
             </div>
             <div class="button-search-container">
                 <button class="button-search">Pesquisa Google</button>
                 <button class="button-lucky"><a href="https://doodles.google/">Estou com sorte</a></button>
             </div>
-        </main>
-        <footer class="footer">
-            <div class="line line1">
-                <div class="location">Brasil</div>
+        </section>
+        <div class="flex-2">
+
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="line line1">
+            <div class="location">Brasil</div>
+        </div>
+        <div class="line line2">
+                <div class="list-left">
+                    <a href="https://about.google/?utm_source=google-BR&utm_medium=referral&utm_campaign=hp-footer&fg=1">Sobre</a>
+                    <a href="https://ads.google.com/intl/pt-BR_br/home/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Publicidade</a>
+                    <a href="https://www.google.com/business/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1">Negócios</a>
+                    <a href="https://www.google.com/search/howsearchworks/?fg=1">Como funciona a Pesquisa</a>
+                </div>
+                <div class="list-right">
+                    <a href="https://policies.google.com/privacy?hl=pt-BR&fg=1">Privacidade</a>
+                    <a href="https://policies.google.com/terms?hl=pt-BR&fg=1">Termos</a>
+                    <a href="#">Configurações</a>
+                </div>
             </div>
-            <div class="line line2">
-                <ul class="list-left">
-                    <li><a href="https://about.google/?utm_source=google-BR&utm_medium=referral&utm_campaign=hp-footer&fg=1">Sobre</a></li>
-                    <li><a href="https://ads.google.com/intl/pt-BR_br/home/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Publicidades</a></li>
-                    <li><a href="https://www.google.com/business/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1">Negócios</a></li>
-                    <li><a href="https://www.google.com/search/howsearchworks/?fg=1">Como funciona a Pesquisa</a></li>
-                </ul>
-                <ul class="list-right">
-                    <li><a href="https://policies.google.com/privacy?hl=pt-BR&fg=1">Privacidade</a></li>
-                    <li><a href="https://policies.google.com/terms?hl=pt-BR&fg=1">Termos</a></li>
-                    <li><a href="#">Configurações</a></li>
-                </ul>
-            </div>
-        </footer>
-    </section>
-    <script src="script.js"></script>
+        </div>
+    </footer>
 </body>
 </html>

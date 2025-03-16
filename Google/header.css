@@ -1,23 +1,14 @@
 .header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 6px;
+    height: 60px;
 }
 
 .header-container {
+    width: 100%;
+    height: 100%;
     display: flex;
+    justify-content: flex-end;
     align-items: center;
-    padding-left: 32px;
-    padding-right: 4px;
-}
-
-.header-icons {
-    padding-right: 15px;
+    padding: 10px 20px;
 }
 
 .header .text a {
@@ -32,11 +23,14 @@
 
 .gmail, .imagens {
     display: inline-block;
-    padding-left: 15px;
+}
+
+.imagens {
+    margin: 0 15px;
 }
 
 .apps-icon {
-    height: 25px;
+    height: 40px;
     padding: 8px;
 }
 
@@ -50,7 +44,6 @@
     background-color: #0b57d0;
     padding: 10px 12px;
     margin-left: 10px;
-    margin-right: 16px;
     border-radius: 30px;
     font-size: 14px;
     cursor: pointer;
