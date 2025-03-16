@@ -40,7 +40,9 @@
 }
 
 .search-container {
-    width: 585px;
+    width: 100%;
+    min-width: 325px;
+    max-width: 585px;
     height: 48px;
     padding: 0 13px;
 
@@ -86,10 +88,11 @@
 }
 
 .button-search-container button {
-    height: 35px;
+    display: inline-block;
+    height: 36px;
     font-size: 14px;
-    margin: 0 5px;
-    padding: 0 15px;
+    margin: 0 4px;
+    padding: 0 16px;
     background-color: rgb(248, 249, 250);
     color: rgb(43, 43, 43);
     outline: none;

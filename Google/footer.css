@@ -1,6 +1,8 @@
 .footer {
     background-color: #f2f2f2;
     width: 100%;
+    min-height: 94px;
+    max-height: 186px;
     color: rgb(51, 51, 51);
     font-size: 14px;
 }
@@ -23,7 +25,7 @@
 
 .list-left, .list-right {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
