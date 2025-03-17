@@ -73,11 +73,13 @@ function atualizarTotais() {
 }
 
 function removerUltimaEntrada() {
+    const erro = document.querySelector('.erro')
     const erroRemover = document.querySelector('.erro-remover')
     if (valoresAdicionados.length === 0){
         erroRemover.innerHTML = 'ERRO: Nenhum cadastro foi feito até o momento!'
         return // Evita erro ao tentar remover sem registros
     }
+    erro.innerHTML = ''
     erroRemover.innerHTML = ''
 
     const ultimo = valoresAdicionados.pop() // Obtém e remove o último item da lista
