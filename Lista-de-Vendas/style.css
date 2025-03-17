@@ -10,9 +10,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 30px;
+    padding: 0 40px;
 
-    background-color: rgb(180, 180, 180);
+    background-image: linear-gradient(120deg, rgb(75, 75, 75), rgb(180, 180, 180), rgb(75, 75, 75));
     height: 100dvh;
 }
 
@@ -21,9 +21,10 @@ body {
 .formulario {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 10px;
-    max-width: 400px;
+    width: 100%;
+    max-width: 500px;
     margin-top: 30px;
     background-color: white;
     box-shadow: 0 0 10px rgb(65, 65, 65);
@@ -40,12 +41,16 @@ body {
     margin-bottom: 20px;
 }
 
+.info {
+    width: 100%;;
+}
+
 .caixa-formulario {
     font-size: 14px;
     padding-left: 10px;
     border: none;
     border-radius: 5px;
-    width: 390px;
+    width: 100%;
     height: 40px;
     outline: none;
     background-color: rgb(230, 230, 230);
@@ -108,6 +113,8 @@ body {
 /* Lista em Tabela */
 
 .listagem {
+    width: 100%;
+    max-width: 500px;
     margin-top: 30px;
     background-color: white;
     padding: 20px;
@@ -136,8 +143,8 @@ body {
 }
 
 .tabela-titulo {
-    padding: 10px;
-    font-size: 14px;
+    padding: 5px;
+    font-size: 12px;
     font-weight: bold;
     background-color: rgb(255, 123, 0);
     color: white;
