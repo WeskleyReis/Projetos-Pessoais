@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Venda</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="formulario">
+        <div class="titulo-formulario">Lista de Vendas</div>
+        <p class="info">Nome</p>
+        <input class="caixa-formulario nome" type="text" placeholder="Digiteo o nome aqui...">
+        <p class="info">Detergente</p>
+        <input class="caixa-formulario detergente" type="number" placeholder="0">
+        <p class="info">Cloro</p>
+        <input class="caixa-formulario cloro" type="number" placeholder="0">
+        <p class="info">Sabão</p>
+        <input class="caixa-formulario sabao" type="number" placeholder="0">
+        <p class="info">Desinfetante</p>
+        <input class="caixa-formulario desinfetante" type="number" placeholder="0">
+        <button class="confirmar" onclick="cadastrar()">CONFIRMAR</button>
+        <p class="erro"></p>
+        <button class="remover" onclick="removerUltimaEntrada()">REMOVER ÚLTIMO CADASTRO</button>
+        <p class="erro-remover"></p>
+    </div>
+    <div class="listagem">
+        <div class="listagem-titulo">Lista</div>
+        <div class="tabela">
+            <div class="js-tabela-nomes tabela-info">
+                <div class="tabela-titulo tabela-nomes">NOMES</div>  
+                <div class="tabela-titulo tabela-nomes">TOTAL</div>   
+            </div>
+            <div class="js-tabela-detergente tabela-info">
+                <div class="tabela-titulo tabela-detergente">DETERGENTE</div>
+                <div class="detergente-total tabela-titulo">0</div>
+            </div>
+            <div class="js-tabela-cloro tabela-info">
+                <div class="tabela-titulo tabela-cloro">CLORO</div>
+                <div class="cloro-total tabela-titulo">0</div>
+            </div>
+            <div class="js-tabela-sabao tabela-info">
+                <div class="tabela-titulo tabela-sabao">SABÃO</div>
+                <div class="sabao-total tabela-titulo">0</div>
+            </div>
+            <div class="js-tabela-desinfetante tabela-info">
+                <div class="tabela-titulo tabela-desinfetante">DESINFETANTE</div>
+                <div class="desinfetante-total tabela-titulo">0</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font: normal 16px Montserrat, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 30px;
+
+    background-color: rgb(180, 180, 180);
+    height: 100dvh;
+}
+
+/* Formulário */
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    max-width: 400px;
+    margin-top: 30px;
+    background-color: white;
+    box-shadow: 0 0 10px rgb(65, 65, 65);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.titulo-formulario {
+    font-weight: bold;
+    font-size: 24px;
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 2px solid rgb(230, 230, 230);
+    margin-bottom: 20px;
+}
+
+.caixa-formulario {
+    font-size: 14px;
+    padding-left: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 390px;
+    height: 40px;
+    outline: none;
+    background-color: rgb(230, 230, 230);
+    transition: box-shadow 0.3s;
+}
+
+.caixa-formulario:focus {
+    box-shadow: 0 0 5px rgb(160, 160, 160);
+}
+
+.confirmar {
+    margin-top: 15px;
+    padding: 15px;
+    width: 100%;
+    background-color: rgb(0, 163, 0);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: box-shadow 0.3s;
+}
+
+.confirmar:hover {
+    box-shadow: 0 0 5px rgb(0, 0, 0, 0.5);
+}
+
+.confirmar:active {
+    transform: scale(0.95);
+    opacity: 80%;
+}
+
+.remover {
+    padding: 15px;
+    width: 100%;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: box-shadow 0.3s;
+}
+
+.remover:hover {
+    box-shadow: 0 0 5px rgb(0, 0, 0, 0.5);
+}
+
+.remover:active {
+    transform: scale(0.95);
+    opacity: 80%;
+}
+
+.erro, .erro-remover {
+    font-size: 14px;
+    font-weight: bold;
+    color: red;
+}
+
+/* Lista em Tabela */
+
+.listagem {
+    margin-top: 30px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgb(65, 65, 65);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.listagem-titulo {
+    font-weight: bold;
+    font-size: 24px;
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 2px solid rgb(230, 230, 230);
+    margin-bottom: 20px;
+}
+
+.tabela {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    text-align: center;
+}
+
+.tabela-titulo {
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: rgb(255, 123, 0);
+    color: white;
+    margin: 0 1px;
+    margin-bottom: 2px;
+}
+
+.tabela-nomes {
+    background-color: rgb(0, 163, 0);
+}
+
+.tabela-conteudo {
+    margin: 1px;
+    padding: 10px;
+    font-size: 14px;
+    background-color: rgb(230, 230, 230);
+}
