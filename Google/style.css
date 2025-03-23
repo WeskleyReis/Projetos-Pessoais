@@ -109,16 +109,14 @@ body {
     height: 100%;
     max-height: 92px;
     margin-top: auto;
-
-    position: relative;
+    text-align: center;
 }
 
 .google-img {
     width: auto;
     max-width: 100%;
     max-height: 100%;
-    object-fit: contain;
-    object-position: center bottom;
+    display: inline-block;
 }
 
 .flex-2 {
