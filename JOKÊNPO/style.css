@@ -56,6 +56,26 @@ body {
     margin-top: 40px;
 }
 
+.confirmation {
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: 0.2s;
+}
+
+.confirmation:hover {
+    background-color: rgb(200, 200, 200);
+}
+
+.confirmation:active {
+    transform: scale(0.9);
+}
+
 .score {
     margin-top: 40px;
 }
@@ -77,6 +97,26 @@ body {
 }
 
 .reset-score-button:active {
+    transform: scale(0.9);
+}
+
+.auto-play-button {
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.2s;
+}
+
+.auto-play-button:hover {
+    background-color: rgb(200, 200, 200);
+}
+
+.auto-play-button:active {
     transform: scale(0.9);
 }
 
